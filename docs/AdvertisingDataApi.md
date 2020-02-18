@@ -22,7 +22,7 @@ Ad accounts by organisation
 ### Example
 
 ```javascript
-import CervinodataApiClient from 'Cervinodata API Client';
+import CervinodataApiClient from 'cervinodata-api-client';
 let defaultClient = CervinodataApiClient.ApiClient.instance;
 // Configure Bearer access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
@@ -75,7 +75,7 @@ Ad campaign report per day by organisation
 ### Example
 
 ```javascript
-import CervinodataApiClient from 'Cervinodata API Client';
+import CervinodataApiClient from 'cervinodata-api-client';
 let defaultClient = CervinodataApiClient.ApiClient.instance;
 // Configure Bearer access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
@@ -132,7 +132,7 @@ Ad campaign report per organisation per account per day
 ### Example
 
 ```javascript
-import CervinodataApiClient from 'Cervinodata API Client';
+import CervinodataApiClient from 'cervinodata-api-client';
 let defaultClient = CervinodataApiClient.ApiClient.instance;
 // Configure Bearer access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
@@ -189,7 +189,7 @@ Ad campaigns by organisation
 ### Example
 
 ```javascript
-import CervinodataApiClient from 'Cervinodata API Client';
+import CervinodataApiClient from 'cervinodata-api-client';
 let defaultClient = CervinodataApiClient.ApiClient.instance;
 // Configure Bearer access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];

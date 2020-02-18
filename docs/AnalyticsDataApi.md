@@ -19,7 +19,7 @@ Views by organisation
 ### Example
 
 ```javascript
-import CervinodataApiClient from 'Cervinodata API Client';
+import CervinodataApiClient from 'cervinodata-api-client';
 let defaultClient = CervinodataApiClient.ApiClient.instance;
 // Configure Bearer access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];

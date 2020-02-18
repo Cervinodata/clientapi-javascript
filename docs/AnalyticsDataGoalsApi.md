@@ -23,7 +23,7 @@ Analytics goal report per campaign per day by organisation
 ### Example
 
 ```javascript
-import CervinodataApiClient from 'Cervinodata API Client';
+import CervinodataApiClient from 'cervinodata-api-client';
 let defaultClient = CervinodataApiClient.ApiClient.instance;
 // Configure Bearer access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
@@ -80,7 +80,7 @@ Analytics goal report per channel group per day by organisation
 ### Example
 
 ```javascript
-import CervinodataApiClient from 'Cervinodata API Client';
+import CervinodataApiClient from 'cervinodata-api-client';
 let defaultClient = CervinodataApiClient.ApiClient.instance;
 // Configure Bearer access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
@@ -137,7 +137,7 @@ Analytics goal report per device per channel group per organisation per view per
 ### Example
 
 ```javascript
-import CervinodataApiClient from 'Cervinodata API Client';
+import CervinodataApiClient from 'cervinodata-api-client';
 let defaultClient = CervinodataApiClient.ApiClient.instance;
 // Configure Bearer access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
@@ -194,7 +194,7 @@ Analytics goal report per device per day by organisation
 ### Example
 
 ```javascript
-import CervinodataApiClient from 'Cervinodata API Client';
+import CervinodataApiClient from 'cervinodata-api-client';
 let defaultClient = CervinodataApiClient.ApiClient.instance;
 // Configure Bearer access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
@@ -251,7 +251,7 @@ Analytics goal report per source medium per day by organisation
 ### Example
 
 ```javascript
-import CervinodataApiClient from 'Cervinodata API Client';
+import CervinodataApiClient from 'cervinodata-api-client';
 let defaultClient = CervinodataApiClient.ApiClient.instance;
 // Configure Bearer access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];

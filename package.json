@@ -1,5 +1,5 @@
 {
-  "name": "Cervinodata API Client",
+  "name": "cervinodata-api-client",
   "version": "0.1.0",
   "description": "A client library for the Cervinodata API.",
   "license": "Apache 2.0",
