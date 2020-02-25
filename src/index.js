@@ -17,6 +17,7 @@ import AdvertisingDataApi from './api/AdvertisingDataApi';
 import AnalyticsDataApi from './api/AnalyticsDataApi';
 import AnalyticsDataDefaultMetricsApi from './api/AnalyticsDataDefaultMetricsApi';
 import AnalyticsDataGoalsApi from './api/AnalyticsDataGoalsApi';
+import CampaignGroupApi from './api/CampaignGroupApi';
 import GenericDataApi from './api/GenericDataApi';
 
 
@@ -81,6 +82,12 @@ export {
     * @property {module:api/AnalyticsDataGoalsApi}
     */
     AnalyticsDataGoalsApi,
+
+    /**
+    * The CampaignGroupApi service constructor.
+    * @property {module:api/CampaignGroupApi}
+    */
+    CampaignGroupApi,
 
     /**
     * The GenericDataApi service constructor.
