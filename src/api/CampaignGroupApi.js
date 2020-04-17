@@ -34,6 +34,57 @@ export default class CampaignGroupApi {
 
 
     /**
+     * Callback function to receive the result of the getCampaignGroupAdReportPerOrganisationPerCampaignPerDay operation.
+     * @callback module:api/CampaignGroupApi~getCampaignGroupAdReportPerOrganisationPerCampaignPerDayCallback
+     * @param {String} error Error message, if any.
+     * @param {String} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Return campaign group ad report per organisation per campaign per day
+     * Campaign group ad report per organisation per campaign per day
+     * @param {Array.<String>} organisationUuids Organisation uuids
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.fromDate From date
+     * @param {module:model/String} opts.dateFormat Outputted date format
+     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {module:api/CampaignGroupApi~getCampaignGroupAdReportPerOrganisationPerCampaignPerDayCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link String}
+     */
+    getCampaignGroupAdReportPerOrganisationPerCampaignPerDay(organisationUuids, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'organisationUuids' is set
+      if (organisationUuids === undefined || organisationUuids === null) {
+        throw new Error("Missing the required parameter 'organisationUuids' when calling getCampaignGroupAdReportPerOrganisationPerCampaignPerDay");
+      }
+
+      let pathParams = {
+        'organisationUuids': organisationUuids
+      };
+      let queryParams = {
+        'from_date': opts['fromDate'],
+        'date_format': opts['dateFormat'],
+        'format': opts['format']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['text/csv', 'application/json'];
+      let returnType = 'String';
+      return this.apiClient.callApi(
+        '/data/campaign-group-ad-report-per-organisation-per-campaign-per-day/{organisationUuids}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getCampaignGroupAdReportPerOrganisationPerDay operation.
      * @callback module:api/CampaignGroupApi~getCampaignGroupAdReportPerOrganisationPerDayCallback
      * @param {String} error Error message, if any.
@@ -136,6 +187,57 @@ export default class CampaignGroupApi {
     }
 
     /**
+     * Callback function to receive the result of the getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDay operation.
+     * @callback module:api/CampaignGroupApi~getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDayCallback
+     * @param {String} error Error message, if any.
+     * @param {String} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Return campaign group facebook ad report per organisation per campaign per day
+     * Campaign group facebook ad report per organisation  per campaign per day
+     * @param {Array.<String>} organisationUuids Organisation uuids
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.fromDate From date
+     * @param {module:model/String} opts.dateFormat Outputted date format
+     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {module:api/CampaignGroupApi~getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDayCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link String}
+     */
+    getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDay(organisationUuids, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'organisationUuids' is set
+      if (organisationUuids === undefined || organisationUuids === null) {
+        throw new Error("Missing the required parameter 'organisationUuids' when calling getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDay");
+      }
+
+      let pathParams = {
+        'organisationUuids': organisationUuids
+      };
+      let queryParams = {
+        'from_date': opts['fromDate'],
+        'date_format': opts['dateFormat'],
+        'format': opts['format']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['text/csv', 'application/json'];
+      let returnType = 'String';
+      return this.apiClient.callApi(
+        '/data/campaign-group-facebook-ad-report-per-organisation-per-campaign-per-day/{organisationUuids}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getCampaignGroupReportPerOrganisationPerDay operation.
      * @callback module:api/CampaignGroupApi~getCampaignGroupReportPerOrganisationPerDayCallback
      * @param {String} error Error message, if any.
@@ -181,6 +283,57 @@ export default class CampaignGroupApi {
       let returnType = 'String';
       return this.apiClient.callApi(
         '/data/campaign-group-report-per-organisation-per-day/{organisationUuids}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getCampaignGroupVideoReportPerOrganisationPerDay operation.
+     * @callback module:api/CampaignGroupApi~getCampaignGroupVideoReportPerOrganisationPerDayCallback
+     * @param {String} error Error message, if any.
+     * @param {String} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Return campaign group video report per organisation per day
+     * Campaign group video report per organisation per day
+     * @param {Array.<String>} organisationUuids Organisation uuids
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.fromDate From date
+     * @param {module:model/String} opts.dateFormat Outputted date format
+     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {module:api/CampaignGroupApi~getCampaignGroupVideoReportPerOrganisationPerDayCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link String}
+     */
+    getCampaignGroupVideoReportPerOrganisationPerDay(organisationUuids, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'organisationUuids' is set
+      if (organisationUuids === undefined || organisationUuids === null) {
+        throw new Error("Missing the required parameter 'organisationUuids' when calling getCampaignGroupVideoReportPerOrganisationPerDay");
+      }
+
+      let pathParams = {
+        'organisationUuids': organisationUuids
+      };
+      let queryParams = {
+        'from_date': opts['fromDate'],
+        'date_format': opts['dateFormat'],
+        'format': opts['format']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['text/csv', 'application/json'];
+      let returnType = 'String';
+      return this.apiClient.callApi(
+        '/data/campaign-group-video-report-per-organisation-per-day/{organisationUuids}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
