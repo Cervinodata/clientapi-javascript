@@ -106,9 +106,11 @@ var bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 var api = new CervinodataApiClient.AdvertisingDataApi()
-var organisationUuid = "organisationUuid_example"; // {String} Organisation uuid
+var organisationUuids = ["null"]; // {[String]} Organisation uuids
 var opts = {
-  'format': "format_example" // {String} Output format
+  'fromDate': new Date("2013-10-20"), // {Date} From date
+  'dateFormat': "dateFormat_example", // {String} Outputted date format
+  'format': "format_example" // {String} Output format (use csv for large result sets)
 };
 var callback = function(error, data, response) {
   if (error) {
@@ -117,7 +119,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getAdAccounts(organisationUuid, opts, callback);
+api.getAdAccountReportPerOrganisationPerDay(organisationUuids, opts, callback);
 
 ```
 
@@ -127,6 +129,7 @@ All URIs are relative to *https://app.cervinodata.com/api/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*CervinodataApiClient.AdvertisingDataApi* | [**getAdAccountReportPerOrganisationPerDay**](docs/AdvertisingDataApi.md#getAdAccountReportPerOrganisationPerDay) | **GET** /data/ad-account-report-per-organisation-per-day/{organisationUuids} | Return ad account report per organisation per day
 *CervinodataApiClient.AdvertisingDataApi* | [**getAdAccounts**](docs/AdvertisingDataApi.md#getAdAccounts) | **GET** /data/ad-accounts/{organisationUuid} | Return ad accounts by organisation
 *CervinodataApiClient.AdvertisingDataApi* | [**getAdCampaignReportPerDay**](docs/AdvertisingDataApi.md#getAdCampaignReportPerDay) | **GET** /data/ad-campaign-report-per-day/{organisationUuid} | Return ad campaign report per day by organisation
 *CervinodataApiClient.AdvertisingDataApi* | [**getAdCampaignReportPerOrganisationPerAccountPerDay**](docs/AdvertisingDataApi.md#getAdCampaignReportPerOrganisationPerAccountPerDay) | **GET** /data/ad-campaign-report-per-organisation-per-account-per-day/{organisationUuids} | Return ad campaign report per organisation per account per day
