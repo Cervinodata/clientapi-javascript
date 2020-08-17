@@ -7,8 +7,11 @@ Method | HTTP request | Description
 [**getAdAccountReportPerOrganisationPerDay**](AdvertisingDataApi.md#getAdAccountReportPerOrganisationPerDay) | **GET** /data/ad-account-report-per-organisation-per-day/{organisationUuids} | Return ad account report per organisation per day
 [**getAdAccounts**](AdvertisingDataApi.md#getAdAccounts) | **GET** /data/ad-accounts/{organisationUuid} | Return ad accounts by organisation
 [**getAdCampaignReportPerDay**](AdvertisingDataApi.md#getAdCampaignReportPerDay) | **GET** /data/ad-campaign-report-per-day/{organisationUuid} | Return ad campaign report per day by organisation
+[**getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay**](AdvertisingDataApi.md#getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay) | **GET** /data/ad-campaign-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids} | Return ad campaign report per organisation per account per campaign per device per day
 [**getAdCampaignReportPerOrganisationPerAccountPerDay**](AdvertisingDataApi.md#getAdCampaignReportPerOrganisationPerAccountPerDay) | **GET** /data/ad-campaign-report-per-organisation-per-account-per-day/{organisationUuids} | Return ad campaign report per organisation per account per day
 [**getAdCampaigns**](AdvertisingDataApi.md#getAdCampaigns) | **GET** /data/ad-campaigns/{organisationUuid} | Return ad campaigns by organisation
+[**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per device per day
+[**getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay**](AdvertisingDataApi.md#getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay) | **GET** /data/google-ads-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids} | Return google ads report per organisation per account per campaign per device per day
 
 
 
@@ -179,6 +182,63 @@ Name | Type | Description  | Notes
 - **Accept**: text/csv, application/json
 
 
+## getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay
+
+> String getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(organisationUuids, opts)
+
+Return ad campaign report per organisation per account per campaign per device per day
+
+Ad campaign report per organisation per account per campaign per device per day
+
+### Example
+
+```javascript
+import CervinodataApiClient from 'cervinodata-api-client';
+let defaultClient = CervinodataApiClient.ApiClient.instance;
+// Configure Bearer access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new CervinodataApiClient.AdvertisingDataApi();
+let organisationUuids = ["null"]; // [String] | Organisation uuids
+let opts = {
+  'fromDate': new Date("2013-10-20"), // Date | From date
+  'dateFormat': "dateFormat_example", // String | Outputted date format
+  'format': "format_example" // String | Output format (use csv for large result sets)
+};
+apiInstance.getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(organisationUuids, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organisationUuids** | [**[String]**](String.md)| Organisation uuids | 
+ **fromDate** | **Date**| From date | [optional] 
+ **dateFormat** | **String**| Outputted date format | [optional] 
+ **format** | **String**| Output format (use csv for large result sets) | [optional] 
+
+### Return type
+
+**String**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/csv, application/json
+
+
 ## getAdCampaignReportPerOrganisationPerAccountPerDay
 
 > String getAdCampaignReportPerOrganisationPerAccountPerDay(organisationUuids, opts)
@@ -276,6 +336,120 @@ Name | Type | Description  | Notes
  **organisationUuid** | **String**| Organisation uuid | 
  **fromDate** | **Date**| From date | [optional] 
  **format** | **String**| Output format | [optional] 
+
+### Return type
+
+**String**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/csv, application/json
+
+
+## getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay
+
+> String getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(organisationUuids, opts)
+
+Return facebook ad extended report per organisation per account per campaign per device per day
+
+Facebook ad extended report per organisation per account per campaign per device per day
+
+### Example
+
+```javascript
+import CervinodataApiClient from 'cervinodata-api-client';
+let defaultClient = CervinodataApiClient.ApiClient.instance;
+// Configure Bearer access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new CervinodataApiClient.AdvertisingDataApi();
+let organisationUuids = ["null"]; // [String] | Organisation uuids
+let opts = {
+  'fromDate': new Date("2013-10-20"), // Date | From date
+  'dateFormat': "dateFormat_example", // String | Outputted date format
+  'format': "format_example" // String | Output format (use csv for large result sets)
+};
+apiInstance.getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(organisationUuids, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organisationUuids** | [**[String]**](String.md)| Organisation uuids | 
+ **fromDate** | **Date**| From date | [optional] 
+ **dateFormat** | **String**| Outputted date format | [optional] 
+ **format** | **String**| Output format (use csv for large result sets) | [optional] 
+
+### Return type
+
+**String**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/csv, application/json
+
+
+## getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay
+
+> String getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(organisationUuids, opts)
+
+Return google ads report per organisation per account per campaign per device per day
+
+Campaign group google ads report per organisation per account per campaign per device per day
+
+### Example
+
+```javascript
+import CervinodataApiClient from 'cervinodata-api-client';
+let defaultClient = CervinodataApiClient.ApiClient.instance;
+// Configure Bearer access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new CervinodataApiClient.AdvertisingDataApi();
+let organisationUuids = ["null"]; // [String] | Organisation uuids
+let opts = {
+  'fromDate': new Date("2013-10-20"), // Date | From date
+  'dateFormat': "dateFormat_example", // String | Outputted date format
+  'format': "format_example" // String | Output format (use csv for large result sets)
+};
+apiInstance.getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(organisationUuids, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organisationUuids** | [**[String]**](String.md)| Organisation uuids | 
+ **fromDate** | **Date**| From date | [optional] 
+ **dateFormat** | **String**| Outputted date format | [optional] 
+ **format** | **String**| Output format (use csv for large result sets) | [optional] 
 
 ### Return type
 
