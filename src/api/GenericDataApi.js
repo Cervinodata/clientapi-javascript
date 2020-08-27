@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import AnyType from '../model/AnyType';
 
 /**
 * GenericData service.
@@ -37,7 +38,7 @@ export default class GenericDataApi {
      * Callback function to receive the result of the getCampaignGroups operation.
      * @callback module:api/GenericDataApi~getCampaignGroupsCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<Object>} data The data returned by the service call.
+     * @param {Array.<module:model/AnyType>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -45,7 +46,7 @@ export default class GenericDataApi {
      * Return campaign groups
      * campaign groups
      * @param {module:api/GenericDataApi~getCampaignGroupsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<Object>}
+     * data is of type: {@link Array.<module:model/AnyType>}
      */
     getCampaignGroups(callback) {
       let postBody = null;
@@ -62,7 +63,7 @@ export default class GenericDataApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = [Object];
+      let returnType = [AnyType];
       return this.apiClient.callApi(
         '/data/campaign-groups', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
