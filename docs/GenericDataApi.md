@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getCampaignGroups
 
-> [AnyType] getCampaignGroups()
+> [Object] getCampaignGroups()
 
 Return campaign groups
 
@@ -42,7 +42,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[AnyType]**](AnyType.md)
+**[Object]**
 
 ### Authorization
 

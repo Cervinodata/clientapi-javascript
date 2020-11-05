@@ -588,5 +588,107 @@ export default class AdvertisingDataApi {
       );
     }
 
+    /**
+     * Callback function to receive the result of the getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay operation.
+     * @callback module:api/AdvertisingDataApi~getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCallback
+     * @param {String} error Error message, if any.
+     * @param {String} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Return snapchat ads extended report per organisation per account per campaign per day
+     * Snapchat ads extended report per organisation per account per campaign per day
+     * @param {Array.<String>} organisationUuids Organisation uuids
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.fromDate From date
+     * @param {module:model/String} opts.dateFormat Outputted date format
+     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {module:api/AdvertisingDataApi~getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link String}
+     */
+    getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'organisationUuids' is set
+      if (organisationUuids === undefined || organisationUuids === null) {
+        throw new Error("Missing the required parameter 'organisationUuids' when calling getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay");
+      }
+
+      let pathParams = {
+        'organisationUuids': organisationUuids
+      };
+      let queryParams = {
+        'from_date': opts['fromDate'],
+        'date_format': opts['dateFormat'],
+        'format': opts['format']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['text/csv', 'application/json'];
+      let returnType = 'String';
+      return this.apiClient.callApi(
+        '/data/snapchat-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay operation.
+     * @callback module:api/AdvertisingDataApi~getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCallback
+     * @param {String} error Error message, if any.
+     * @param {String} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Return twitter ads extended report per organisation per account per campaign per day
+     * Twitter ads extended report per organisation per account per campaign per day
+     * @param {Array.<String>} organisationUuids Organisation uuids
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.fromDate From date
+     * @param {module:model/String} opts.dateFormat Outputted date format
+     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {module:api/AdvertisingDataApi~getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link String}
+     */
+    getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'organisationUuids' is set
+      if (organisationUuids === undefined || organisationUuids === null) {
+        throw new Error("Missing the required parameter 'organisationUuids' when calling getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay");
+      }
+
+      let pathParams = {
+        'organisationUuids': organisationUuids
+      };
+      let queryParams = {
+        'from_date': opts['fromDate'],
+        'date_format': opts['dateFormat'],
+        'format': opts['format']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['text/csv', 'application/json'];
+      let returnType = 'String';
+      return this.apiClient.callApi(
+        '/data/twitter-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
 
 }
