@@ -435,7 +435,7 @@ export default class CampaignGroupApi {
       let accepts = ['text/csv', 'application/json'];
       let returnType = 'String';
       return this.apiClient.callApi(
-        '/data/campaign-group-facebook-ad-conversion-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}', 'GET',
+        '/data/campaign-group-facebook-ad-custom-conversion-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
