@@ -43,7 +43,7 @@ export default class AdvertisingDataApi {
 
     /**
      * Return ad account report per organisation per day
-     * Ad account report per organisation  per day
+     * Ad account report per organisation per day
      * @param {Array.<String>} organisationUuids Organisation uuids
      * @param {Object} opts Optional parameters
      * @param {Date} opts.fromDate From date

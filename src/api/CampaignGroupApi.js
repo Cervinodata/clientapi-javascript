@@ -196,7 +196,7 @@ export default class CampaignGroupApi {
 
     /**
      * Return campaign group adform report per organisation per campaign per day
-     * Campaign group adform report per organisation  per campaign per day
+     * Campaign group adform report per organisation per campaign per day
      * @param {Array.<String>} organisationUuids Organisation uuids
      * @param {Object} opts Optional parameters
      * @param {Date} opts.fromDate From date
@@ -232,6 +232,57 @@ export default class CampaignGroupApi {
       let returnType = 'String';
       return this.apiClient.callApi(
         '/data/campaign-group-adform-report-per-organisation-per-campaign-per-day/{organisationUuids}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDay operation.
+     * @callback module:api/CampaignGroupApi~getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDayCallback
+     * @param {String} error Error message, if any.
+     * @param {String} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Return campaign group adform report per organisation per campaign per line-item per day
+     * Campaign group adform report per organisation per campaign per line-item per day
+     * @param {Array.<String>} organisationUuids Organisation uuids
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.fromDate From date
+     * @param {module:model/String} opts.dateFormat Outputted date format
+     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {module:api/CampaignGroupApi~getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDayCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link String}
+     */
+    getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDay(organisationUuids, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'organisationUuids' is set
+      if (organisationUuids === undefined || organisationUuids === null) {
+        throw new Error("Missing the required parameter 'organisationUuids' when calling getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDay");
+      }
+
+      let pathParams = {
+        'organisationUuids': organisationUuids
+      };
+      let queryParams = {
+        'from_date': opts['fromDate'],
+        'date_format': opts['dateFormat'],
+        'format': opts['format']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['text/csv', 'application/json'];
+      let returnType = 'String';
+      return this.apiClient.callApi(
+        '/data/campaign-group-adform-report-per-organisation-per-campaign-per-line-item-per-day/{organisationUuids}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -655,7 +706,7 @@ export default class CampaignGroupApi {
 
     /**
      * Return campaign group facebook ad report per organisation per campaign per day
-     * Campaign group facebook ad report per organisation  per campaign per day
+     * Campaign group facebook ad report per organisation per campaign per day
      * @param {Array.<String>} organisationUuids Organisation uuids
      * @param {Object} opts Optional parameters
      * @param {Date} opts.fromDate From date
@@ -706,7 +757,7 @@ export default class CampaignGroupApi {
 
     /**
      * Return campaign group google ads report per organisation per campaign per day
-     * Campaign group google ads report per organisation  per campaign per day
+     * Campaign group google ads report per organisation per campaign per day
      * @param {Array.<String>} organisationUuids Organisation uuids
      * @param {Object} opts Optional parameters
      * @param {Date} opts.fromDate From date
