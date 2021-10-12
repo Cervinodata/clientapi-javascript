@@ -799,6 +799,57 @@ export default class CampaignGroupApi {
     }
 
     /**
+     * Callback function to receive the result of the getCampaignGroupGoalReportPerOrganisationPerDay operation.
+     * @callback module:api/CampaignGroupApi~getCampaignGroupGoalReportPerOrganisationPerDayCallback
+     * @param {String} error Error message, if any.
+     * @param {String} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Return campaign group goal report per organisation per day
+     * Campaign group goal report per organisation per day
+     * @param {Array.<String>} organisationUuids Organisation uuids
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.fromDate From date
+     * @param {module:model/String} opts.dateFormat Outputted date format
+     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {module:api/CampaignGroupApi~getCampaignGroupGoalReportPerOrganisationPerDayCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link String}
+     */
+    getCampaignGroupGoalReportPerOrganisationPerDay(organisationUuids, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'organisationUuids' is set
+      if (organisationUuids === undefined || organisationUuids === null) {
+        throw new Error("Missing the required parameter 'organisationUuids' when calling getCampaignGroupGoalReportPerOrganisationPerDay");
+      }
+
+      let pathParams = {
+        'organisationUuids': organisationUuids
+      };
+      let queryParams = {
+        'from_date': opts['fromDate'],
+        'date_format': opts['dateFormat'],
+        'format': opts['format']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['text/csv', 'application/json'];
+      let returnType = 'String';
+      return this.apiClient.callApi(
+        '/data/campaign-group-goal-report-per-organisation-per-day/{organisationUuids}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDay operation.
      * @callback module:api/CampaignGroupApi~getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDayCallback
      * @param {String} error Error message, if any.
