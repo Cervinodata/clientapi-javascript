@@ -334,6 +334,55 @@ export default class AdvertisingDataApi {
     }
 
     /**
+     * Callback function to receive the result of the getAdGroups operation.
+     * @callback module:api/AdvertisingDataApi~getAdGroupsCallback
+     * @param {String} error Error message, if any.
+     * @param {String} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Return ad groups by organisation
+     * Ad groups by organisation
+     * @param {String} organisationUuid Organisation uuid
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.fromDate From date
+     * @param {module:model/String} opts.format Output format
+     * @param {module:api/AdvertisingDataApi~getAdGroupsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link String}
+     */
+    getAdGroups(organisationUuid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'organisationUuid' is set
+      if (organisationUuid === undefined || organisationUuid === null) {
+        throw new Error("Missing the required parameter 'organisationUuid' when calling getAdGroups");
+      }
+
+      let pathParams = {
+        'organisationUuid': organisationUuid
+      };
+      let queryParams = {
+        'from_date': opts['fromDate'],
+        'format': opts['format']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['text/csv', 'application/json'];
+      let returnType = 'String';
+      return this.apiClient.callApi(
+        '/data/ad-groups/{organisationUuid}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay operation.
      * @callback module:api/AdvertisingDataApi~getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCallback
      * @param {String} error Error message, if any.
