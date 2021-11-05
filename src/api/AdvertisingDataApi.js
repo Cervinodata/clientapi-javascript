@@ -791,6 +791,57 @@ export default class AdvertisingDataApi {
     }
 
     /**
+     * Callback function to receive the result of the getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay operation.
+     * @callback module:api/AdvertisingDataApi~getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCallback
+     * @param {String} error Error message, if any.
+     * @param {String} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Return pinterest ads extended report per organisation per account per campaign per day
+     * Pinterest ads extended report per organisation per account per campaign per day
+     * @param {Array.<String>} organisationUuids Organisation uuids
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.fromDate From date
+     * @param {module:model/String} opts.dateFormat Outputted date format
+     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {module:api/AdvertisingDataApi~getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link String}
+     */
+    getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'organisationUuids' is set
+      if (organisationUuids === undefined || organisationUuids === null) {
+        throw new Error("Missing the required parameter 'organisationUuids' when calling getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay");
+      }
+
+      let pathParams = {
+        'organisationUuids': organisationUuids
+      };
+      let queryParams = {
+        'from_date': opts['fromDate'],
+        'date_format': opts['dateFormat'],
+        'format': opts['format']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['text/csv', 'application/json'];
+      let returnType = 'String';
+      return this.apiClient.callApi(
+        '/data/pinterest-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay operation.
      * @callback module:api/AdvertisingDataApi~getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCallback
      * @param {String} error Error message, if any.
