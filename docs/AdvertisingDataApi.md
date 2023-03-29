@@ -14,14 +14,17 @@ Method | HTTP request | Description
 [**getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/bing-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return bing ads extended report per organisation per account per campaign per day
 [**getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/facebook-ad-custom-conversion-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return facebook ad custom conversion report per organisation per account per campaign per day
 [**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-group-per-day/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per ad group per day
+[**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlus**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlus) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-group-per-day-plus/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per ad group per day plus
 [**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-per-day/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per ad per day
 [**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per day
+[**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlus**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlus) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-day-plus/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per day plus
 [**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per device per day
 [**getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay**](AdvertisingDataApi.md#getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay) | **GET** /data/google-ads-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids} | Return google ads report per organisation per account per campaign per device per day
 [**getHashedAdCampaignReportPerOrganisationPerAccountPerDay**](AdvertisingDataApi.md#getHashedAdCampaignReportPerOrganisationPerAccountPerDay) | **GET** /data/hashed-ad-campaign-report-per-organisation-per-account-per-day/{organisationUuids} | Return hashed ad campaign report per organisation per account per day
 [**getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/linkedin-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return linkedin ads extended report per organisation per account per campaign per day
 [**getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/pinterest-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return pinterest ads extended report per organisation per account per campaign per day
 [**getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/snapchat-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return snapchat ads extended report per organisation per account per campaign per day
+[**getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/tiktok-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return tiktok ads extended report per organisation per account per campaign per day
 [**getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/twitter-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return twitter ads extended report per organisation per account per campaign per day
 
 
@@ -588,6 +591,63 @@ Name | Type | Description  | Notes
 - **Accept**: text/csv, application/json
 
 
+## getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlus
+
+> String getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlus(organisationUuids, opts)
+
+Return facebook ad extended report per organisation per account per campaign per ad group per day plus
+
+Facebook ad extended report per organisation per account per campaign per ad group per day plus
+
+### Example
+
+```javascript
+import CervinodataApiClient from 'cervinodata-api-client';
+let defaultClient = CervinodataApiClient.ApiClient.instance;
+// Configure Bearer access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new CervinodataApiClient.AdvertisingDataApi();
+let organisationUuids = ["null"]; // [String] | Organisation uuids
+let opts = {
+  'fromDate': new Date("2013-10-20"), // Date | From date
+  'dateFormat': "dateFormat_example", // String | Outputted date format
+  'format': "format_example" // String | Output format (use csv for large result sets)
+};
+apiInstance.getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlus(organisationUuids, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organisationUuids** | [**[String]**](String.md)| Organisation uuids | 
+ **fromDate** | **Date**| From date | [optional] 
+ **dateFormat** | **String**| Outputted date format | [optional] 
+ **format** | **String**| Output format (use csv for large result sets) | [optional] 
+
+### Return type
+
+**String**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/csv, application/json
+
+
 ## getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay
 
 > String getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay(organisationUuids, opts)
@@ -670,6 +730,63 @@ let opts = {
   'format': "format_example" // String | Output format (use csv for large result sets)
 };
 apiInstance.getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organisationUuids** | [**[String]**](String.md)| Organisation uuids | 
+ **fromDate** | **Date**| From date | [optional] 
+ **dateFormat** | **String**| Outputted date format | [optional] 
+ **format** | **String**| Output format (use csv for large result sets) | [optional] 
+
+### Return type
+
+**String**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/csv, application/json
+
+
+## getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlus
+
+> String getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlus(organisationUuids, opts)
+
+Return facebook ad extended report per organisation per account per campaign per day plus
+
+Facebook ad extended report per organisation per account per campaign per day plus
+
+### Example
+
+```javascript
+import CervinodataApiClient from 'cervinodata-api-client';
+let defaultClient = CervinodataApiClient.ApiClient.instance;
+// Configure Bearer access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new CervinodataApiClient.AdvertisingDataApi();
+let organisationUuids = ["null"]; // [String] | Organisation uuids
+let opts = {
+  'fromDate': new Date("2013-10-20"), // Date | From date
+  'dateFormat': "dateFormat_example", // String | Outputted date format
+  'format': "format_example" // String | Output format (use csv for large result sets)
+};
+apiInstance.getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlus(organisationUuids, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -1012,6 +1129,63 @@ let opts = {
   'format': "format_example" // String | Output format (use csv for large result sets)
 };
 apiInstance.getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organisationUuids** | [**[String]**](String.md)| Organisation uuids | 
+ **fromDate** | **Date**| From date | [optional] 
+ **dateFormat** | **String**| Outputted date format | [optional] 
+ **format** | **String**| Output format (use csv for large result sets) | [optional] 
+
+### Return type
+
+**String**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/csv, application/json
+
+
+## getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay
+
+> String getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, opts)
+
+Return tiktok ads extended report per organisation per account per campaign per day
+
+TikTok ads extended report per organisation per account per campaign per day
+
+### Example
+
+```javascript
+import CervinodataApiClient from 'cervinodata-api-client';
+let defaultClient = CervinodataApiClient.ApiClient.instance;
+// Configure Bearer access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new CervinodataApiClient.AdvertisingDataApi();
+let organisationUuids = ["null"]; // [String] | Organisation uuids
+let opts = {
+  'fromDate': new Date("2013-10-20"), // Date | From date
+  'dateFormat': "dateFormat_example", // String | Outputted date format
+  'format': "format_example" // String | Output format (use csv for large result sets)
+};
+apiInstance.getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {

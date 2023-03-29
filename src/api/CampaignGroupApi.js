@@ -1,6 +1,6 @@
 /**
  * Cervinodata API documentation
- * <div style='margin: 2em 0;'>  <p>  Before you get going with the Cervinodata API, set up Cervinodata (read the support page here: <a href='https://support.cervinodata.com/hc/en-nl/articles/360004363237' target='_blank'>How to set up the Cervinodata API</a>).  </p> <h3>To use the Cervinodata API, you need all of the following:</h3> <p> <ol> <li>An active Cervinodata account, you can start a free trial <a href='https://app.cervinodata.com/register' target='_blank'>here</a></li> <li>At least one connection to a platform (check <a href='https://app.cervinodata.com/data-sources-connections' target='_blank'>here</a>)</li> <li>At least one account switched ON (check <a href='https://app.cervinodata.com/accounts' target='_blank'>here</a>)</li> <li>At least one data refresh executed (check <a href='https://app.cervinodata.com/manual-data-refresh' target='_blank'>here</a>)</li> <li>An active API token (check <a href='https://app.cervinodata.com/settings#/api' target='_blank'>here</a>)</li> </ol> </p> <p> Note that limits apply for <a href='https://support.cervinodata.com/hc/articles/360014265139' target='_blank'>Free plan users</a>. </p> <p> If you wish to automate your Cervinodata API connection, check out the list of client API's at <a href='https://github.com/Cervinodata' target='_blank'>https://github.com/Cervinodata</a>. </p> </div>
+ * <div style='margin: 2em 0;'> <p> Before you get going with the Cervinodata API, set up Cervinodata (read the support page here: <a href='https://support.cervinodata.com/hc/en-nl/articles/360004363237' target='_blank'>How to set up the Cervinodata API</a>). </p> <h3>To use the Cervinodata API, you need all of the following:</h3> <p> <ol> <li>An active Cervinodata account, you can start a free trial <a href='https://app.cervinodata.com/register' target='_blank'>here</a></li> <li>At least one connection to a platform (check <a href='https://app.cervinodata.com/data-sources-connections' target='_blank'>here</a>)</li> <li>At least one account switched ON (check <a href='https://app.cervinodata.com/accounts' target='_blank'>here</a>)</li> <li>At least one data refresh executed (check <a href='https://app.cervinodata.com/manual-data-refresh' target='_blank'>here</a>)</li> <li>An active API token (check <a href='https://app.cervinodata.com/settings#/api' target='_blank'>here</a>)</li> </ol> </p> <p> Note that limits apply for <a href='https://support.cervinodata.com/hc/articles/360014265139' target='_blank'>Free plan users</a>. </p> <p> If you wish to automate your Cervinodata API connection, check out the list of client API's at <a href='https://github.com/Cervinodata' target='_blank'>https://github.com/Cervinodata</a>. </p> </div>
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@cervinodata.com
@@ -850,6 +850,57 @@ export default class CampaignGroupApi {
     }
 
     /**
+     * Callback function to receive the result of the getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay operation.
+     * @callback module:api/CampaignGroupApi~getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayCallback
+     * @param {String} error Error message, if any.
+     * @param {String} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Return campaign group google ads extended report per organisation per account per campaign per ad group per day
+     * Campaign group google ads extended report per organisation per account per campaign per ad group per day
+     * @param {Array.<String>} organisationUuids Organisation uuids
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.fromDate From date
+     * @param {module:model/String} opts.dateFormat Outputted date format
+     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {module:api/CampaignGroupApi~getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link String}
+     */
+    getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay(organisationUuids, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'organisationUuids' is set
+      if (organisationUuids === undefined || organisationUuids === null) {
+        throw new Error("Missing the required parameter 'organisationUuids' when calling getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay");
+      }
+
+      let pathParams = {
+        'organisationUuids': organisationUuids
+      };
+      let queryParams = {
+        'from_date': opts['fromDate'],
+        'date_format': opts['dateFormat'],
+        'format': opts['format']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['text/csv', 'application/json'];
+      let returnType = 'String';
+      return this.apiClient.callApi(
+        '/data/campaign-group-google-ads-extended-report-per-organisation-per-account-per-campaign-per-ad-group-per-day/{organisationUuids}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDay operation.
      * @callback module:api/CampaignGroupApi~getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDayCallback
      * @param {String} error Error message, if any.
@@ -1099,6 +1150,57 @@ export default class CampaignGroupApi {
       let returnType = 'String';
       return this.apiClient.callApi(
         '/data/campaign-group-snapchat-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay operation.
+     * @callback module:api/CampaignGroupApi~getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCallback
+     * @param {String} error Error message, if any.
+     * @param {String} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Return campaign group tiktok ads extended report per organisation per account per campaign per day
+     * Campaign group tiktok ads extended report per organisation per account per campaign per day
+     * @param {Array.<String>} organisationUuids Organisation uuids
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.fromDate From date
+     * @param {module:model/String} opts.dateFormat Outputted date format
+     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {module:api/CampaignGroupApi~getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link String}
+     */
+    getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'organisationUuids' is set
+      if (organisationUuids === undefined || organisationUuids === null) {
+        throw new Error("Missing the required parameter 'organisationUuids' when calling getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay");
+      }
+
+      let pathParams = {
+        'organisationUuids': organisationUuids
+      };
+      let queryParams = {
+        'from_date': opts['fromDate'],
+        'date_format': opts['dateFormat'],
+        'format': opts['format']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['text/csv', 'application/json'];
+      let returnType = 'String';
+      return this.apiClient.callApi(
+        '/data/campaign-group-tiktok-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
