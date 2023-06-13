@@ -11,6 +11,9 @@ Method | HTTP request | Description
 [**getAdCampaignReportPerOrganisationPerAccountPerDay**](AdvertisingDataApi.md#getAdCampaignReportPerOrganisationPerAccountPerDay) | **GET** /data/ad-campaign-report-per-organisation-per-account-per-day/{organisationUuids} | Return ad campaign report per organisation per account per day
 [**getAdCampaigns**](AdvertisingDataApi.md#getAdCampaigns) | **GET** /data/ad-campaigns/{organisationUuid} | Return ad campaigns by organisation
 [**getAdGroups**](AdvertisingDataApi.md#getAdGroups) | **GET** /data/ad-groups/{organisationUuid} | Return ad groups by organisation
+[**getAdformExtendedReportPerOrganisationPerCampaignPerCreativePerDay**](AdvertisingDataApi.md#getAdformExtendedReportPerOrganisationPerCampaignPerCreativePerDay) | **GET** /data/adform-extended-report-per-organisation-per-campaign-per-creative-per-day/{organisationUuids} | Return adform extended report per organisation per campaign per creative per day
+[**getAdformExtendedReportPerOrganisationPerCampaignPerDay**](AdvertisingDataApi.md#getAdformExtendedReportPerOrganisationPerCampaignPerDay) | **GET** /data/adform-extended-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return adform extended report per organisation per campaign per day
+[**getAdformExtendedReportPerOrganisationPerCampaignPerLineItemPerDay**](AdvertisingDataApi.md#getAdformExtendedReportPerOrganisationPerCampaignPerLineItemPerDay) | **GET** /data/adform-extended-report-per-organisation-per-campaign-per-line-item-per-day/{organisationUuids} | Return adform extended report per organisation per campaign per line item per day
 [**getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/bing-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return bing ads extended report per organisation per account per campaign per day
 [**getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/facebook-ad-custom-conversion-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return facebook ad custom conversion report per organisation per account per campaign per day
 [**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-group-per-day/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per ad group per day
@@ -405,6 +408,177 @@ Name | Type | Description  | Notes
  **organisationUuid** | **String**| Organisation uuid | 
  **fromDate** | **Date**| From date | [optional] 
  **format** | **String**| Output format | [optional] 
+
+### Return type
+
+**String**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/csv, application/json
+
+
+## getAdformExtendedReportPerOrganisationPerCampaignPerCreativePerDay
+
+> String getAdformExtendedReportPerOrganisationPerCampaignPerCreativePerDay(organisationUuids, opts)
+
+Return adform extended report per organisation per campaign per creative per day
+
+Adform extended report per organisation per campaign per creative per day
+
+### Example
+
+```javascript
+import CervinodataApiClient from 'cervinodata-api-client';
+let defaultClient = CervinodataApiClient.ApiClient.instance;
+// Configure Bearer access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new CervinodataApiClient.AdvertisingDataApi();
+let organisationUuids = ["null"]; // [String] | Organisation uuids
+let opts = {
+  'fromDate': new Date("2013-10-20"), // Date | From date
+  'dateFormat': "dateFormat_example", // String | Outputted date format
+  'format': "format_example" // String | Output format (use csv for large result sets)
+};
+apiInstance.getAdformExtendedReportPerOrganisationPerCampaignPerCreativePerDay(organisationUuids, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organisationUuids** | [**[String]**](String.md)| Organisation uuids | 
+ **fromDate** | **Date**| From date | [optional] 
+ **dateFormat** | **String**| Outputted date format | [optional] 
+ **format** | **String**| Output format (use csv for large result sets) | [optional] 
+
+### Return type
+
+**String**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/csv, application/json
+
+
+## getAdformExtendedReportPerOrganisationPerCampaignPerDay
+
+> String getAdformExtendedReportPerOrganisationPerCampaignPerDay(organisationUuids, opts)
+
+Return adform extended report per organisation per campaign per day
+
+Adform extended report per organisation per campaign per day
+
+### Example
+
+```javascript
+import CervinodataApiClient from 'cervinodata-api-client';
+let defaultClient = CervinodataApiClient.ApiClient.instance;
+// Configure Bearer access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new CervinodataApiClient.AdvertisingDataApi();
+let organisationUuids = ["null"]; // [String] | Organisation uuids
+let opts = {
+  'fromDate': new Date("2013-10-20"), // Date | From date
+  'dateFormat': "dateFormat_example", // String | Outputted date format
+  'format': "format_example" // String | Output format (use csv for large result sets)
+};
+apiInstance.getAdformExtendedReportPerOrganisationPerCampaignPerDay(organisationUuids, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organisationUuids** | [**[String]**](String.md)| Organisation uuids | 
+ **fromDate** | **Date**| From date | [optional] 
+ **dateFormat** | **String**| Outputted date format | [optional] 
+ **format** | **String**| Output format (use csv for large result sets) | [optional] 
+
+### Return type
+
+**String**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/csv, application/json
+
+
+## getAdformExtendedReportPerOrganisationPerCampaignPerLineItemPerDay
+
+> String getAdformExtendedReportPerOrganisationPerCampaignPerLineItemPerDay(organisationUuids, opts)
+
+Return adform extended report per organisation per campaign per line item per day
+
+Adform extended report per organisation per campaign per line item per day
+
+### Example
+
+```javascript
+import CervinodataApiClient from 'cervinodata-api-client';
+let defaultClient = CervinodataApiClient.ApiClient.instance;
+// Configure Bearer access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new CervinodataApiClient.AdvertisingDataApi();
+let organisationUuids = ["null"]; // [String] | Organisation uuids
+let opts = {
+  'fromDate': new Date("2013-10-20"), // Date | From date
+  'dateFormat': "dateFormat_example", // String | Outputted date format
+  'format': "format_example" // String | Output format (use csv for large result sets)
+};
+apiInstance.getAdformExtendedReportPerOrganisationPerCampaignPerLineItemPerDay(organisationUuids, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organisationUuids** | [**[String]**](String.md)| Organisation uuids | 
+ **fromDate** | **Date**| From date | [optional] 
+ **dateFormat** | **String**| Outputted date format | [optional] 
+ **format** | **String**| Output format (use csv for large result sets) | [optional] 
 
 ### Return type
 

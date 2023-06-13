@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**getCampaignGroupAdReportPerOrganisationPerCampaignPerDay**](CampaignGroupApi.md#getCampaignGroupAdReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-ad-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group ad report per organisation per campaign per day
 [**getCampaignGroupAdReportPerOrganisationPerCampaignPerWeek**](CampaignGroupApi.md#getCampaignGroupAdReportPerOrganisationPerCampaignPerWeek) | **GET** /data/campaign-group-ad-report-per-organisation-per-campaign-per-week/{organisationUuids} | Return campaign group ad report per organisation per campaign per week
 [**getCampaignGroupAdReportPerOrganisationPerDay**](CampaignGroupApi.md#getCampaignGroupAdReportPerOrganisationPerDay) | **GET** /data/campaign-group-ad-report-per-organisation-per-day/{organisationUuids} | Return campaign group ad report per organisation per day
+[**getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay**](CampaignGroupApi.md#getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-adform-extended-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group adform extended report per organisation per campaign per day
 [**getCampaignGroupAdformReportPerOrganisationPerCampaignPerDay**](CampaignGroupApi.md#getCampaignGroupAdformReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-adform-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group adform report per organisation per campaign per day
 [**getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDay**](CampaignGroupApi.md#getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDay) | **GET** /data/campaign-group-adform-report-per-organisation-per-campaign-per-line-item-per-day/{organisationUuids} | Return campaign group adform report per organisation per campaign per line-item per day
 [**getCampaignGroupAnalyticsReportPerOrganisationPerDay**](CampaignGroupApi.md#getCampaignGroupAnalyticsReportPerOrganisationPerDay) | **GET** /data/campaign-group-analytics-report-per-organisation-per-day/{organisationUuids} | Return campaign group analytics report per organisation per day
@@ -172,6 +173,63 @@ let opts = {
   'format': "format_example" // String | Output format (use csv for large result sets)
 };
 apiInstance.getCampaignGroupAdReportPerOrganisationPerDay(organisationUuids, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organisationUuids** | [**[String]**](String.md)| Organisation uuids | 
+ **fromDate** | **Date**| From date | [optional] 
+ **dateFormat** | **String**| Outputted date format | [optional] 
+ **format** | **String**| Output format (use csv for large result sets) | [optional] 
+
+### Return type
+
+**String**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/csv, application/json
+
+
+## getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay
+
+> String getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay(organisationUuids, opts)
+
+Return campaign group adform extended report per organisation per campaign per day
+
+Campaign group adform extended report per organisation per campaign per day
+
+### Example
+
+```javascript
+import CervinodataApiClient from 'cervinodata-api-client';
+let defaultClient = CervinodataApiClient.ApiClient.instance;
+// Configure Bearer access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new CervinodataApiClient.CampaignGroupApi();
+let organisationUuids = ["null"]; // [String] | Organisation uuids
+let opts = {
+  'fromDate': new Date("2013-10-20"), // Date | From date
+  'dateFormat': "dateFormat_example", // String | Outputted date format
+  'format': "format_example" // String | Output format (use csv for large result sets)
+};
+apiInstance.getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay(organisationUuids, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
