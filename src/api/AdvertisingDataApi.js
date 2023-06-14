@@ -383,6 +383,57 @@ export default class AdvertisingDataApi {
     }
 
     /**
+     * Callback function to receive the result of the getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay operation.
+     * @callback module:api/AdvertisingDataApi~getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayCallback
+     * @param {String} error Error message, if any.
+     * @param {String} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Return adform extended report per organisation per account per campaign per day
+     * Adform extended report per organisation per account per campaign per day
+     * @param {Array.<String>} organisationUuids Organisation uuids
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.fromDate From date
+     * @param {module:model/String} opts.dateFormat Outputted date format
+     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {module:api/AdvertisingDataApi~getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link String}
+     */
+    getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'organisationUuids' is set
+      if (organisationUuids === undefined || organisationUuids === null) {
+        throw new Error("Missing the required parameter 'organisationUuids' when calling getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay");
+      }
+
+      let pathParams = {
+        'organisationUuids': organisationUuids
+      };
+      let queryParams = {
+        'from_date': opts['fromDate'],
+        'date_format': opts['dateFormat'],
+        'format': opts['format']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['text/csv', 'application/json'];
+      let returnType = 'String';
+      return this.apiClient.callApi(
+        '/data/adform-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getAdformExtendedReportPerOrganisationPerCampaignPerCreativePerDay operation.
      * @callback module:api/AdvertisingDataApi~getAdformExtendedReportPerOrganisationPerCampaignPerCreativePerDayCallback
      * @param {String} error Error message, if any.
@@ -428,57 +479,6 @@ export default class AdvertisingDataApi {
       let returnType = 'String';
       return this.apiClient.callApi(
         '/data/adform-extended-report-per-organisation-per-campaign-per-creative-per-day/{organisationUuids}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the getAdformExtendedReportPerOrganisationPerCampaignPerDay operation.
-     * @callback module:api/AdvertisingDataApi~getAdformExtendedReportPerOrganisationPerCampaignPerDayCallback
-     * @param {String} error Error message, if any.
-     * @param {String} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Return adform extended report per organisation per campaign per day
-     * Adform extended report per organisation per campaign per day
-     * @param {Array.<String>} organisationUuids Organisation uuids
-     * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
-     * @param {module:api/AdvertisingDataApi~getAdformExtendedReportPerOrganisationPerCampaignPerDayCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link String}
-     */
-    getAdformExtendedReportPerOrganisationPerCampaignPerDay(organisationUuids, opts, callback) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'organisationUuids' is set
-      if (organisationUuids === undefined || organisationUuids === null) {
-        throw new Error("Missing the required parameter 'organisationUuids' when calling getAdformExtendedReportPerOrganisationPerCampaignPerDay");
-      }
-
-      let pathParams = {
-        'organisationUuids': organisationUuids
-      };
-      let queryParams = {
-        'from_date': opts['fromDate'],
-        'date_format': opts['dateFormat'],
-        'format': opts['format']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = [];
-      let accepts = ['text/csv', 'application/json'];
-      let returnType = 'String';
-      return this.apiClient.callApi(
-        '/data/adform-extended-report-per-organisation-per-campaign-per-day/{organisationUuids}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -187,30 +187,30 @@ export default class CampaignGroupApi {
     }
 
     /**
-     * Callback function to receive the result of the getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay operation.
-     * @callback module:api/CampaignGroupApi~getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDayCallback
+     * Callback function to receive the result of the getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay operation.
+     * @callback module:api/CampaignGroupApi~getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayCallback
      * @param {String} error Error message, if any.
      * @param {String} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Return campaign group adform extended report per organisation per campaign per day
-     * Campaign group adform extended report per organisation per campaign per day
+     * Return campaign group adform extended report per organisation per account per campaign per day
+     * Campaign group adform extended report per organisation per account per campaign per day
      * @param {Array.<String>} organisationUuids Organisation uuids
      * @param {Object} opts Optional parameters
      * @param {Date} opts.fromDate From date
      * @param {module:model/String} opts.dateFormat Outputted date format
      * @param {module:model/String} opts.format Output format (use csv for large result sets)
-     * @param {module:api/CampaignGroupApi~getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDayCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CampaignGroupApi~getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
-    getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay(organisationUuids, opts, callback) {
+    getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'organisationUuids' is set
       if (organisationUuids === undefined || organisationUuids === null) {
-        throw new Error("Missing the required parameter 'organisationUuids' when calling getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay");
+        throw new Error("Missing the required parameter 'organisationUuids' when calling getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay");
       }
 
       let pathParams = {
@@ -231,7 +231,7 @@ export default class CampaignGroupApi {
       let accepts = ['text/csv', 'application/json'];
       let returnType = 'String';
       return this.apiClient.callApi(
-        '/data/campaign-group-adform-extended-report-per-organisation-per-campaign-per-day/{organisationUuids}', 'GET',
+        '/data/campaign-group-adform-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

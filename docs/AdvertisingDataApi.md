@@ -11,8 +11,8 @@ Method | HTTP request | Description
 [**getAdCampaignReportPerOrganisationPerAccountPerDay**](AdvertisingDataApi.md#getAdCampaignReportPerOrganisationPerAccountPerDay) | **GET** /data/ad-campaign-report-per-organisation-per-account-per-day/{organisationUuids} | Return ad campaign report per organisation per account per day
 [**getAdCampaigns**](AdvertisingDataApi.md#getAdCampaigns) | **GET** /data/ad-campaigns/{organisationUuid} | Return ad campaigns by organisation
 [**getAdGroups**](AdvertisingDataApi.md#getAdGroups) | **GET** /data/ad-groups/{organisationUuid} | Return ad groups by organisation
+[**getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/adform-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return adform extended report per organisation per account per campaign per day
 [**getAdformExtendedReportPerOrganisationPerCampaignPerCreativePerDay**](AdvertisingDataApi.md#getAdformExtendedReportPerOrganisationPerCampaignPerCreativePerDay) | **GET** /data/adform-extended-report-per-organisation-per-campaign-per-creative-per-day/{organisationUuids} | Return adform extended report per organisation per campaign per creative per day
-[**getAdformExtendedReportPerOrganisationPerCampaignPerDay**](AdvertisingDataApi.md#getAdformExtendedReportPerOrganisationPerCampaignPerDay) | **GET** /data/adform-extended-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return adform extended report per organisation per campaign per day
 [**getAdformExtendedReportPerOrganisationPerCampaignPerLineItemPerDay**](AdvertisingDataApi.md#getAdformExtendedReportPerOrganisationPerCampaignPerLineItemPerDay) | **GET** /data/adform-extended-report-per-organisation-per-campaign-per-line-item-per-day/{organisationUuids} | Return adform extended report per organisation per campaign per line item per day
 [**getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/bing-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return bing ads extended report per organisation per account per campaign per day
 [**getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/facebook-ad-custom-conversion-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return facebook ad custom conversion report per organisation per account per campaign per day
@@ -423,13 +423,13 @@ Name | Type | Description  | Notes
 - **Accept**: text/csv, application/json
 
 
-## getAdformExtendedReportPerOrganisationPerCampaignPerCreativePerDay
+## getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay
 
-> String getAdformExtendedReportPerOrganisationPerCampaignPerCreativePerDay(organisationUuids, opts)
+> String getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, opts)
 
-Return adform extended report per organisation per campaign per creative per day
+Return adform extended report per organisation per account per campaign per day
 
-Adform extended report per organisation per campaign per creative per day
+Adform extended report per organisation per account per campaign per day
 
 ### Example
 
@@ -447,7 +447,7 @@ let opts = {
   'dateFormat': "dateFormat_example", // String | Outputted date format
   'format': "format_example" // String | Output format (use csv for large result sets)
 };
-apiInstance.getAdformExtendedReportPerOrganisationPerCampaignPerCreativePerDay(organisationUuids, opts, (error, data, response) => {
+apiInstance.getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -480,13 +480,13 @@ Name | Type | Description  | Notes
 - **Accept**: text/csv, application/json
 
 
-## getAdformExtendedReportPerOrganisationPerCampaignPerDay
+## getAdformExtendedReportPerOrganisationPerCampaignPerCreativePerDay
 
-> String getAdformExtendedReportPerOrganisationPerCampaignPerDay(organisationUuids, opts)
+> String getAdformExtendedReportPerOrganisationPerCampaignPerCreativePerDay(organisationUuids, opts)
 
-Return adform extended report per organisation per campaign per day
+Return adform extended report per organisation per campaign per creative per day
 
-Adform extended report per organisation per campaign per day
+Adform extended report per organisation per campaign per creative per day
 
 ### Example
 
@@ -504,7 +504,7 @@ let opts = {
   'dateFormat': "dateFormat_example", // String | Outputted date format
   'format': "format_example" // String | Output format (use csv for large result sets)
 };
-apiInstance.getAdformExtendedReportPerOrganisationPerCampaignPerDay(organisationUuids, opts, (error, data, response) => {
+apiInstance.getAdformExtendedReportPerOrganisationPerCampaignPerCreativePerDay(organisationUuids, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {

@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getCampaignGroupAdReportPerOrganisationPerCampaignPerDay**](CampaignGroupApi.md#getCampaignGroupAdReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-ad-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group ad report per organisation per campaign per day
 [**getCampaignGroupAdReportPerOrganisationPerCampaignPerWeek**](CampaignGroupApi.md#getCampaignGroupAdReportPerOrganisationPerCampaignPerWeek) | **GET** /data/campaign-group-ad-report-per-organisation-per-campaign-per-week/{organisationUuids} | Return campaign group ad report per organisation per campaign per week
 [**getCampaignGroupAdReportPerOrganisationPerDay**](CampaignGroupApi.md#getCampaignGroupAdReportPerOrganisationPerDay) | **GET** /data/campaign-group-ad-report-per-organisation-per-day/{organisationUuids} | Return campaign group ad report per organisation per day
-[**getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay**](CampaignGroupApi.md#getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-adform-extended-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group adform extended report per organisation per campaign per day
+[**getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](CampaignGroupApi.md#getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-adform-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group adform extended report per organisation per account per campaign per day
 [**getCampaignGroupAdformReportPerOrganisationPerCampaignPerDay**](CampaignGroupApi.md#getCampaignGroupAdformReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-adform-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group adform report per organisation per campaign per day
 [**getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDay**](CampaignGroupApi.md#getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDay) | **GET** /data/campaign-group-adform-report-per-organisation-per-campaign-per-line-item-per-day/{organisationUuids} | Return campaign group adform report per organisation per campaign per line-item per day
 [**getCampaignGroupAnalyticsReportPerOrganisationPerDay**](CampaignGroupApi.md#getCampaignGroupAnalyticsReportPerOrganisationPerDay) | **GET** /data/campaign-group-analytics-report-per-organisation-per-day/{organisationUuids} | Return campaign group analytics report per organisation per day
@@ -205,13 +205,13 @@ Name | Type | Description  | Notes
 - **Accept**: text/csv, application/json
 
 
-## getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay
+## getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay
 
-> String getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay(organisationUuids, opts)
+> String getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, opts)
 
-Return campaign group adform extended report per organisation per campaign per day
+Return campaign group adform extended report per organisation per account per campaign per day
 
-Campaign group adform extended report per organisation per campaign per day
+Campaign group adform extended report per organisation per account per campaign per day
 
 ### Example
 
@@ -229,7 +229,7 @@ let opts = {
   'dateFormat': "dateFormat_example", // String | Outputted date format
   'format': "format_example" // String | Output format (use csv for large result sets)
 };
-apiInstance.getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay(organisationUuids, opts, (error, data, response) => {
+apiInstance.getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
