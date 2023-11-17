@@ -25,6 +25,3 @@ src/api/CampaignGroupApi.js
 src/api/GenericDataApi.js
 src/api/ProductDataApi.js
 src/index.js
-test/api/AnalyticsDataProductMetricsApi.spec.js
-test/api/AnalyticsDataTransactionMetricsApi.spec.js
-test/api/ProductDataApi.spec.js
