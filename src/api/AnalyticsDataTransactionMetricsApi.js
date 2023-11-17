@@ -15,15 +15,15 @@
 import ApiClient from "../ApiClient";
 
 /**
-* GenericData service.
-* @module api/GenericDataApi
+* AnalyticsDataTransactionMetrics service.
+* @module api/AnalyticsDataTransactionMetricsApi
 * @version 0.1.0
 */
-export default class GenericDataApi {
+export default class AnalyticsDataTransactionMetricsApi {
 
     /**
-    * Constructs a new GenericDataApi. 
-    * @alias module:api/GenericDataApi
+    * Constructs a new AnalyticsDataTransactionMetricsApi. 
+    * @alias module:api/AnalyticsDataTransactionMetricsApi
     * @class
     * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
     * default to {@link module:ApiClient#instance} if unspecified.
@@ -34,66 +34,31 @@ export default class GenericDataApi {
 
 
     /**
-     * Callback function to receive the result of the getCampaignGroups operation.
-     * @callback module:api/GenericDataApi~getCampaignGroupsCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<Object>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Return campaign groups
-     * campaign groups
-     * @param {module:api/GenericDataApi~getCampaignGroupsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<Object>}
-     */
-    getCampaignGroups(callback) {
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = [Object];
-      return this.apiClient.callApi(
-        '/data/campaign-groups', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the getOrganisations operation.
-     * @callback module:api/GenericDataApi~getOrganisationsCallback
+     * Callback function to receive the result of the getGA4ReportPerCampaignPerOrganisationPerProperty operation.
+     * @callback module:api/AnalyticsDataTransactionMetricsApi~getGA4ReportPerCampaignPerOrganisationPerPropertyCallback
      * @param {String} error Error message, if any.
      * @param {String} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Return organisations
-     * organisations
-     * @param {Object} opts Optional parameters
-     * @param {module:model/String} [format] Output format
-     * @param {module:api/GenericDataApi~getOrganisationsCallback} callback The callback function, accepting three arguments: error, data, response
+     * Return GA4 report per campaign per organisation per property
+     * GA4 report per campaign per organisation per property
+     * @param {Array.<String>} organisationUuids Organisation uuids
+     * @param {module:api/AnalyticsDataTransactionMetricsApi~getGA4ReportPerCampaignPerOrganisationPerPropertyCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
-    getOrganisations(opts, callback) {
-      opts = opts || {};
+    getGA4ReportPerCampaignPerOrganisationPerProperty(organisationUuids, callback) {
       let postBody = null;
+      // verify the required parameter 'organisationUuids' is set
+      if (organisationUuids === undefined || organisationUuids === null) {
+        throw new Error("Missing the required parameter 'organisationUuids' when calling getGA4ReportPerCampaignPerOrganisationPerProperty");
+      }
 
       let pathParams = {
+        'organisationUuids': organisationUuids
       };
       let queryParams = {
-        'format': opts['format']
       };
       let headerParams = {
       };
@@ -102,10 +67,53 @@ export default class GenericDataApi {
 
       let authNames = ['bearerAuth'];
       let contentTypes = [];
-      let accepts = ['text/csv', 'application/json'];
+      let accepts = ['text/csv'];
       let returnType = 'String';
       return this.apiClient.callApi(
-        '/data/organisations', 'GET',
+        '/data/ga4-report-per-campaign-per-organisation-per-property/{organisationUuids}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getGA4ReportPerCampaignPerOrganisationPerPropertyPerMonth operation.
+     * @callback module:api/AnalyticsDataTransactionMetricsApi~getGA4ReportPerCampaignPerOrganisationPerPropertyPerMonthCallback
+     * @param {String} error Error message, if any.
+     * @param {String} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Return GA4 report per campaign per organisation per property per month
+     * GA4 report per campaign per organisation per property per month
+     * @param {Array.<String>} organisationUuids Organisation uuids
+     * @param {module:api/AnalyticsDataTransactionMetricsApi~getGA4ReportPerCampaignPerOrganisationPerPropertyPerMonthCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link String}
+     */
+    getGA4ReportPerCampaignPerOrganisationPerPropertyPerMonth(organisationUuids, callback) {
+      let postBody = null;
+      // verify the required parameter 'organisationUuids' is set
+      if (organisationUuids === undefined || organisationUuids === null) {
+        throw new Error("Missing the required parameter 'organisationUuids' when calling getGA4ReportPerCampaignPerOrganisationPerPropertyPerMonth");
+      }
+
+      let pathParams = {
+        'organisationUuids': organisationUuids
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['text/csv'];
+      let returnType = 'String';
+      return this.apiClient.callApi(
+        '/data/ga4-report-per-campaign-per-organisation-per-property-per-month/{organisationUuids}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

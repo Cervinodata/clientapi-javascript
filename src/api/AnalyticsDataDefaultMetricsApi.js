@@ -46,9 +46,9 @@ export default class AnalyticsDataDefaultMetricsApi {
      * Analytics report per campaign per day by organisation
      * @param {String} organisationUuid Organisation uuid
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AnalyticsDataDefaultMetricsApi~getAnalyticsReportPerCampaignPerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -97,9 +97,9 @@ export default class AnalyticsDataDefaultMetricsApi {
      * Analytics report per channel group per day by organisation
      * @param {String} organisationUuid Organisation uuid
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AnalyticsDataDefaultMetricsApi~getAnalyticsReportPerChannelGroupPerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -148,9 +148,9 @@ export default class AnalyticsDataDefaultMetricsApi {
      * Analytics report per device per channel group per organisation per view per day
      * @param {Array.<String>} organisationUuids Organisation uuids
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AnalyticsDataDefaultMetricsApi~getAnalyticsReportPerDevicePerChannelGroupPerOrganisationPerViewPerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -199,9 +199,9 @@ export default class AnalyticsDataDefaultMetricsApi {
      * Analytics report per device per day by organisation
      * @param {String} organisationUuid Organisation uuid
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AnalyticsDataDefaultMetricsApi~getAnalyticsReportPerDevicePerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -250,9 +250,9 @@ export default class AnalyticsDataDefaultMetricsApi {
      * Analytics report per source medium per day by organisation
      * @param {String} organisationUuid Organisation uuid
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AnalyticsDataDefaultMetricsApi~getAnalyticsReportPerSourceMediumPerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -301,9 +301,9 @@ export default class AnalyticsDataDefaultMetricsApi {
      * GA4 report per device per channel group per organisation per property per day
      * @param {Array.<String>} organisationUuids Organisation uuids
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AnalyticsDataDefaultMetricsApi~getGA4ReportPerDevicePerChannelGroupPerOrganisationPerPropertyPerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */

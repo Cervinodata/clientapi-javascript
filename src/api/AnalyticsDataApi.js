@@ -34,6 +34,178 @@ export default class AnalyticsDataApi {
 
 
     /**
+     * Callback function to receive the result of the getGA4ReportPerChannelGroupPerOrganisationPerProperty operation.
+     * @callback module:api/AnalyticsDataApi~getGA4ReportPerChannelGroupPerOrganisationPerPropertyCallback
+     * @param {String} error Error message, if any.
+     * @param {String} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Return GA4 report per channel group per organisation per property
+     * GA4 report per channel group per organisation per property
+     * @param {Array.<String>} organisationUuids Organisation uuids
+     * @param {module:api/AnalyticsDataApi~getGA4ReportPerChannelGroupPerOrganisationPerPropertyCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link String}
+     */
+    getGA4ReportPerChannelGroupPerOrganisationPerProperty(organisationUuids, callback) {
+      let postBody = null;
+      // verify the required parameter 'organisationUuids' is set
+      if (organisationUuids === undefined || organisationUuids === null) {
+        throw new Error("Missing the required parameter 'organisationUuids' when calling getGA4ReportPerChannelGroupPerOrganisationPerProperty");
+      }
+
+      let pathParams = {
+        'organisationUuids': organisationUuids
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['text/csv'];
+      let returnType = 'String';
+      return this.apiClient.callApi(
+        '/data/ga4-report-per-channel-group-per-organisation-per-property/{organisationUuids}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getGA4ReportPerChannelGroupPerOrganisationPerPropertyPerMonth operation.
+     * @callback module:api/AnalyticsDataApi~getGA4ReportPerChannelGroupPerOrganisationPerPropertyPerMonthCallback
+     * @param {String} error Error message, if any.
+     * @param {String} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Return GA4 report per channel group per organisation per property per month
+     * GA4 report per channel group per organisation per property per month
+     * @param {Array.<String>} organisationUuids Organisation uuids
+     * @param {module:api/AnalyticsDataApi~getGA4ReportPerChannelGroupPerOrganisationPerPropertyPerMonthCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link String}
+     */
+    getGA4ReportPerChannelGroupPerOrganisationPerPropertyPerMonth(organisationUuids, callback) {
+      let postBody = null;
+      // verify the required parameter 'organisationUuids' is set
+      if (organisationUuids === undefined || organisationUuids === null) {
+        throw new Error("Missing the required parameter 'organisationUuids' when calling getGA4ReportPerChannelGroupPerOrganisationPerPropertyPerMonth");
+      }
+
+      let pathParams = {
+        'organisationUuids': organisationUuids
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['text/csv'];
+      let returnType = 'String';
+      return this.apiClient.callApi(
+        '/data/ga4-report-per-channel-group-per-organisation-per-property-per-month/{organisationUuids}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth operation.
+     * @callback module:api/AnalyticsDataApi~getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonthCallback
+     * @param {String} error Error message, if any.
+     * @param {String} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Return GA4 report per channel group per product name per organisation per property per month
+     * GA4 report per channel group per product name per organisation per property per month
+     * @param {Array.<String>} organisationUuids Organisation uuids
+     * @param {module:api/AnalyticsDataApi~getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonthCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link String}
+     */
+    getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth(organisationUuids, callback) {
+      let postBody = null;
+      // verify the required parameter 'organisationUuids' is set
+      if (organisationUuids === undefined || organisationUuids === null) {
+        throw new Error("Missing the required parameter 'organisationUuids' when calling getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth");
+      }
+
+      let pathParams = {
+        'organisationUuids': organisationUuids
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['text/csv'];
+      let returnType = 'String';
+      return this.apiClient.callApi(
+        '/data/ga4-report-per-channel-group-per-product-name-per-organisation-per-property-per-month/{organisationUuids}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getGA4ReportPerChannelGroupPerSourceMediumPerOrganisationPerPropertyPerMonth operation.
+     * @callback module:api/AnalyticsDataApi~getGA4ReportPerChannelGroupPerSourceMediumPerOrganisationPerPropertyPerMonthCallback
+     * @param {String} error Error message, if any.
+     * @param {String} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Return GA4 report per channel group per source medium per organisation per property per month
+     * GA4 report per channel group per source medium per organisation per property per month
+     * @param {Array.<String>} organisationUuids Organisation uuids
+     * @param {module:api/AnalyticsDataApi~getGA4ReportPerChannelGroupPerSourceMediumPerOrganisationPerPropertyPerMonthCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link String}
+     */
+    getGA4ReportPerChannelGroupPerSourceMediumPerOrganisationPerPropertyPerMonth(organisationUuids, callback) {
+      let postBody = null;
+      // verify the required parameter 'organisationUuids' is set
+      if (organisationUuids === undefined || organisationUuids === null) {
+        throw new Error("Missing the required parameter 'organisationUuids' when calling getGA4ReportPerChannelGroupPerSourceMediumPerOrganisationPerPropertyPerMonth");
+      }
+
+      let pathParams = {
+        'organisationUuids': organisationUuids
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['text/csv'];
+      let returnType = 'String';
+      return this.apiClient.callApi(
+        '/data/ga4-report-per-channel-group-per-source-medium-per-organisation-per-property-per-month/{organisationUuids}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getViews operation.
      * @callback module:api/AnalyticsDataApi~getViewsCallback
      * @param {String} error Error message, if any.
@@ -46,7 +218,7 @@ export default class AnalyticsDataApi {
      * Views by organisation
      * @param {String} organisationUuid Organisation uuid
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.format Output format
+     * @param {module:model/String} [format] Output format
      * @param {module:api/AnalyticsDataApi~getViewsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */

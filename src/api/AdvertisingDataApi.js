@@ -46,9 +46,9 @@ export default class AdvertisingDataApi {
      * Ad account report per organisation per day
      * @param {Array.<String>} organisationUuids Organisation uuids
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AdvertisingDataApi~getAdAccountReportPerOrganisationPerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -97,7 +97,7 @@ export default class AdvertisingDataApi {
      * Ad accounts by organisation
      * @param {String} organisationUuid Organisation uuid
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.format Output format
+     * @param {module:model/String} [format] Output format
      * @param {module:api/AdvertisingDataApi~getAdAccountsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -144,9 +144,9 @@ export default class AdvertisingDataApi {
      * Ad campaign report per day by organisation
      * @param {String} organisationUuid Organisation uuid
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AdvertisingDataApi~getAdCampaignReportPerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -195,9 +195,9 @@ export default class AdvertisingDataApi {
      * Ad campaign report per organisation per account per campaign per device per day
      * @param {Array.<String>} organisationUuids Organisation uuids
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AdvertisingDataApi~getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -246,9 +246,9 @@ export default class AdvertisingDataApi {
      * Ad campaign report per organisation per account per day
      * @param {Array.<String>} organisationUuids Organisation uuids
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AdvertisingDataApi~getAdCampaignReportPerOrganisationPerAccountPerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -297,8 +297,8 @@ export default class AdvertisingDataApi {
      * Ad campaigns by organisation
      * @param {String} organisationUuid Organisation uuid
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.format Output format
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [format] Output format
      * @param {module:api/AdvertisingDataApi~getAdCampaignsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -346,8 +346,8 @@ export default class AdvertisingDataApi {
      * Ad groups by organisation
      * @param {String} organisationUuid Organisation uuid
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.format Output format
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [format] Output format
      * @param {module:api/AdvertisingDataApi~getAdGroupsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -395,9 +395,9 @@ export default class AdvertisingDataApi {
      * Adform extended report per organisation per account per campaign per creative per day
      * @param {Array.<String>} organisationUuids Organisation uuids
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AdvertisingDataApi~getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -446,9 +446,9 @@ export default class AdvertisingDataApi {
      * Adform extended report per organisation per account per campaign per day
      * @param {Array.<String>} organisationUuids Organisation uuids
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AdvertisingDataApi~getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -497,9 +497,9 @@ export default class AdvertisingDataApi {
      * Adform extended report per organisation per account per campaign per line item per day
      * @param {Array.<String>} organisationUuids Organisation uuids
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AdvertisingDataApi~getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -548,9 +548,9 @@ export default class AdvertisingDataApi {
      * Bing ads extended report per organisation per account per campaign per day
      * @param {Array.<String>} organisationUuids Organisation uuids
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AdvertisingDataApi~getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -599,9 +599,9 @@ export default class AdvertisingDataApi {
      * Facebook ad custom conversion report per organisation per account per campaign per day
      * @param {Array.<String>} organisationUuids Organisation uuids
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AdvertisingDataApi~getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -650,9 +650,9 @@ export default class AdvertisingDataApi {
      * Facebook ad extended report per organisation per account per campaign per ad group per day
      * @param {Array.<String>} organisationUuids Organisation uuids
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AdvertisingDataApi~getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -701,9 +701,9 @@ export default class AdvertisingDataApi {
      * Facebook ad extended report per organisation per account per campaign per ad group per day plus
      * @param {Array.<String>} organisationUuids Organisation uuids
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AdvertisingDataApi~getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlusCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -752,9 +752,9 @@ export default class AdvertisingDataApi {
      * Facebook ad extended report per organisation per account per campaign per ad per day
      * @param {Array.<String>} organisationUuids Organisation uuids
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AdvertisingDataApi~getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -803,9 +803,9 @@ export default class AdvertisingDataApi {
      * Facebook ad extended report per organisation per account per campaign per day
      * @param {Array.<String>} organisationUuids Organisation uuids
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AdvertisingDataApi~getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -854,9 +854,9 @@ export default class AdvertisingDataApi {
      * Facebook ad extended report per organisation per account per campaign per day plus
      * @param {Array.<String>} organisationUuids Organisation uuids
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AdvertisingDataApi~getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlusCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -905,9 +905,9 @@ export default class AdvertisingDataApi {
      * Facebook ad extended report per organisation per account per campaign per device per day
      * @param {Array.<String>} organisationUuids Organisation uuids
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AdvertisingDataApi~getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -956,9 +956,9 @@ export default class AdvertisingDataApi {
      * Campaign group google ads report per organisation per account per campaign per device per day
      * @param {Array.<String>} organisationUuids Organisation uuids
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AdvertisingDataApi~getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -1007,9 +1007,9 @@ export default class AdvertisingDataApi {
      * Hashed ad campaign report per organisation per account per day
      * @param {Array.<String>} organisationUuids Organisation uuids
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AdvertisingDataApi~getHashedAdCampaignReportPerOrganisationPerAccountPerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -1058,9 +1058,9 @@ export default class AdvertisingDataApi {
      * Linkedin ads extended report per organisation per account per campaign per day
      * @param {Array.<String>} organisationUuids Organisation uuids
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AdvertisingDataApi~getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -1109,9 +1109,9 @@ export default class AdvertisingDataApi {
      * Pinterest ads extended report per organisation per account per campaign per day
      * @param {Array.<String>} organisationUuids Organisation uuids
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AdvertisingDataApi~getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -1160,9 +1160,9 @@ export default class AdvertisingDataApi {
      * Snapchat ads extended report per organisation per account per campaign per day
      * @param {Array.<String>} organisationUuids Organisation uuids
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AdvertisingDataApi~getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -1211,9 +1211,9 @@ export default class AdvertisingDataApi {
      * TikTok ads extended report per organisation per account per campaign per day
      * @param {Array.<String>} organisationUuids Organisation uuids
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AdvertisingDataApi~getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -1262,9 +1262,9 @@ export default class AdvertisingDataApi {
      * Twitter ads extended report per organisation per account per campaign per day
      * @param {Array.<String>} organisationUuids Organisation uuids
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AdvertisingDataApi~getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */

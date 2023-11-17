@@ -46,9 +46,9 @@ export default class AnalyticsDataGoalsApi {
      * Analytics goal report per campaign per day by organisation
      * @param {String} organisationUuid Organisation uuid
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AnalyticsDataGoalsApi~getAnalyticsGoalReportPerCampaignPerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -97,9 +97,9 @@ export default class AnalyticsDataGoalsApi {
      * Analytics goal report per channel group per day by organisation
      * @param {String} organisationUuid Organisation uuid
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AnalyticsDataGoalsApi~getAnalyticsGoalReportPerChannelGroupPerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -148,9 +148,9 @@ export default class AnalyticsDataGoalsApi {
      * Analytics goal report per device per day by organisation
      * @param {String} organisationUuid Organisation uuid
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AnalyticsDataGoalsApi~getAnalyticsGoalReportPerDevicePerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
@@ -199,9 +199,9 @@ export default class AnalyticsDataGoalsApi {
      * Analytics goal report per source medium per day by organisation
      * @param {String} organisationUuid Organisation uuid
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.fromDate From date
-     * @param {module:model/String} opts.dateFormat Outputted date format
-     * @param {module:model/String} opts.format Output format (use csv for large result sets)
+     * @param {Date} [fromDate] From date
+     * @param {module:model/String} [dateFormat] Outputted date format
+     * @param {module:model/String} [format] Output format (use csv for large result sets)
      * @param {module:api/AnalyticsDataGoalsApi~getAnalyticsGoalReportPerSourceMediumPerDayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */

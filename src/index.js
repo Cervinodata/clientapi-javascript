@@ -17,8 +17,11 @@ import AdvertisingDataApi from './api/AdvertisingDataApi';
 import AnalyticsDataApi from './api/AnalyticsDataApi';
 import AnalyticsDataDefaultMetricsApi from './api/AnalyticsDataDefaultMetricsApi';
 import AnalyticsDataGoalsApi from './api/AnalyticsDataGoalsApi';
+import AnalyticsDataProductMetricsApi from './api/AnalyticsDataProductMetricsApi';
+import AnalyticsDataTransactionMetricsApi from './api/AnalyticsDataTransactionMetricsApi';
 import CampaignGroupApi from './api/CampaignGroupApi';
 import GenericDataApi from './api/GenericDataApi';
+import ProductDataApi from './api/ProductDataApi';
 
 
 /**
@@ -84,6 +87,18 @@ export {
     AnalyticsDataGoalsApi,
 
     /**
+    * The AnalyticsDataProductMetricsApi service constructor.
+    * @property {module:api/AnalyticsDataProductMetricsApi}
+    */
+    AnalyticsDataProductMetricsApi,
+
+    /**
+    * The AnalyticsDataTransactionMetricsApi service constructor.
+    * @property {module:api/AnalyticsDataTransactionMetricsApi}
+    */
+    AnalyticsDataTransactionMetricsApi,
+
+    /**
     * The CampaignGroupApi service constructor.
     * @property {module:api/CampaignGroupApi}
     */
@@ -93,5 +108,11 @@ export {
     * The GenericDataApi service constructor.
     * @property {module:api/GenericDataApi}
     */
-    GenericDataApi
+    GenericDataApi,
+
+    /**
+    * The ProductDataApi service constructor.
+    * @property {module:api/ProductDataApi}
+    */
+    ProductDataApi
 };
