@@ -4,13 +4,13 @@ All URIs are relative to *https://app.cervinodata.com/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth**](ProductDataApi.md#getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth) | **GET** /data/ga4-report-per-channel-group-per-product-name-per-organisation-per-property-per-month/{organisationUuids} | Return GA4 report per channel group per product name per organisation per property per month
+[**getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0**](ProductDataApi.md#getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0) | **GET** /data/ga4-report-per-channel-group-per-product-name-per-organisation-per-property-per-month/{organisationUuids} | Return GA4 report per channel group per product name per organisation per property per month
 
 
 
-## getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth
+## getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0
 
-> String getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth(organisationUuids)
+> String getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0(organisationUuids)
 
 Return GA4 report per channel group per product name per organisation per property per month
 
@@ -27,7 +27,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new CervinodataApiClient.ProductDataApi();
 let organisationUuids = ["null"]; // [String] | Organisation uuids
-apiInstance.getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth(organisationUuids, (error, data, response) => {
+apiInstance.getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0(organisationUuids, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {

@@ -34,8 +34,8 @@ export default class ProductDataApi {
 
 
     /**
-     * Callback function to receive the result of the getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth operation.
-     * @callback module:api/ProductDataApi~getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonthCallback
+     * Callback function to receive the result of the getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0 operation.
+     * @callback module:api/ProductDataApi~getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0Callback
      * @param {String} error Error message, if any.
      * @param {String} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -45,14 +45,14 @@ export default class ProductDataApi {
      * Return GA4 report per channel group per product name per organisation per property per month
      * GA4 report per channel group per product name per organisation per property per month
      * @param {Array.<String>} organisationUuids Organisation uuids
-     * @param {module:api/ProductDataApi~getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonthCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/ProductDataApi~getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
-    getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth(organisationUuids, callback) {
+    getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0(organisationUuids, callback) {
       let postBody = null;
       // verify the required parameter 'organisationUuids' is set
       if (organisationUuids === undefined || organisationUuids === null) {
-        throw new Error("Missing the required parameter 'organisationUuids' when calling getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth");
+        throw new Error("Missing the required parameter 'organisationUuids' when calling getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0");
       }
 
       let pathParams = {
