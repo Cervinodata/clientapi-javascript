@@ -298,6 +298,7 @@ export default class AdvertisingDataApi {
      * @param {String} organisationUuid Organisation uuid
      * @param {Object} opts Optional parameters
      * @param {Date} [fromDate] From date
+     * @param {Boolean} [includeInactive] Include inactive campaigns
      * @param {module:model/String} [format] Output format
      * @param {module:api/AdvertisingDataApi~getAdCampaignsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
@@ -315,6 +316,7 @@ export default class AdvertisingDataApi {
       };
       let queryParams = {
         'from_date': opts['fromDate'],
+        'include_inactive': opts['includeInactive'],
         'format': opts['format']
       };
       let headerParams = {
@@ -347,6 +349,7 @@ export default class AdvertisingDataApi {
      * @param {String} organisationUuid Organisation uuid
      * @param {Object} opts Optional parameters
      * @param {Date} [fromDate] From date
+     * @param {Boolean} [includeInactive] Include inactive ad groups
      * @param {module:model/String} [format] Output format
      * @param {module:api/AdvertisingDataApi~getAdGroupsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
@@ -364,6 +367,7 @@ export default class AdvertisingDataApi {
       };
       let queryParams = {
         'from_date': opts['fromDate'],
+        'include_inactive': opts['includeInactive'],
         'format': opts['format']
       };
       let headerParams = {

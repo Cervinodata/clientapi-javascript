@@ -334,6 +334,7 @@ let apiInstance = new CervinodataApiClient.AdvertisingDataApi();
 let organisationUuid = "organisationUuid_example"; // String | Organisation uuid
 let opts = {
   'fromDate': new Date("2013-10-20"), // Date | From date
+  'includeInactive': true, // Boolean | Include inactive campaigns
   'format': "format_example" // String | Output format
 };
 apiInstance.getAdCampaigns(organisationUuid, opts, (error, data, response) => {
@@ -352,6 +353,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organisationUuid** | **String**| Organisation uuid | 
  **fromDate** | **Date**| From date | [optional] 
+ **includeInactive** | **Boolean**| Include inactive campaigns | [optional] 
  **format** | **String**| Output format | [optional] 
 
 ### Return type
@@ -389,6 +391,7 @@ let apiInstance = new CervinodataApiClient.AdvertisingDataApi();
 let organisationUuid = "organisationUuid_example"; // String | Organisation uuid
 let opts = {
   'fromDate': new Date("2013-10-20"), // Date | From date
+  'includeInactive': true, // Boolean | Include inactive ad groups
   'format': "format_example" // String | Output format
 };
 apiInstance.getAdGroups(organisationUuid, opts, (error, data, response) => {
@@ -407,6 +410,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organisationUuid** | **String**| Organisation uuid | 
  **fromDate** | **Date**| From date | [optional] 
+ **includeInactive** | **Boolean**| Include inactive ad groups | [optional] 
  **format** | **String**| Output format | [optional] 
 
 ### Return type
