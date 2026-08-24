@@ -13,6 +13,7 @@
 
 
 import ApiClient from './ApiClient';
+import CreateOrganisationRequest from './model/CreateOrganisationRequest';
 import AdvertisingDataApi from './api/AdvertisingDataApi';
 import AnalyticsDataApi from './api/AnalyticsDataApi';
 import AnalyticsDataDefaultMetricsApi from './api/AnalyticsDataDefaultMetricsApi';
@@ -61,6 +62,12 @@ export {
      * @property {module:ApiClient}
      */
     ApiClient,
+
+    /**
+     * The CreateOrganisationRequest model constructor.
+     * @property {module:model/CreateOrganisationRequest}
+     */
+    CreateOrganisationRequest,
 
     /**
     * The AdvertisingDataApi service constructor.

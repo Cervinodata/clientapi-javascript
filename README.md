@@ -221,13 +221,17 @@ Class | Method | HTTP request | Description
 *CervinodataApiClient.CampaignGroupApi* | [**getCampaignGroupTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](docs/CampaignGroupApi.md#getCampaignGroupTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-twitter-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group twitter ads extended report per organisation per account per campaign per day
 *CervinodataApiClient.CampaignGroupApi* | [**getCampaignGroupVideoReportPerOrganisationPerCampaignPerDay**](docs/CampaignGroupApi.md#getCampaignGroupVideoReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-video-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group video report per organisation per campaign per day
 *CervinodataApiClient.CampaignGroupApi* | [**getCampaignGroupVideoReportPerOrganisationPerDay**](docs/CampaignGroupApi.md#getCampaignGroupVideoReportPerOrganisationPerDay) | **GET** /data/campaign-group-video-report-per-organisation-per-day/{organisationUuids} | Return campaign group video report per organisation per day
+*CervinodataApiClient.GenericDataApi* | [**createOrganisation**](docs/GenericDataApi.md#createOrganisation) | **POST** /data/organisations | Create an organisation
+*CervinodataApiClient.GenericDataApi* | [**deleteOrganisation**](docs/GenericDataApi.md#deleteOrganisation) | **DELETE** /data/organisations/{organisationUuid} | Delete an organisation
 *CervinodataApiClient.GenericDataApi* | [**getCampaignGroups**](docs/GenericDataApi.md#getCampaignGroups) | **GET** /data/campaign-groups | Return campaign groups
 *CervinodataApiClient.GenericDataApi* | [**getOrganisations**](docs/GenericDataApi.md#getOrganisations) | **GET** /data/organisations | Return organisations
+*CervinodataApiClient.GenericDataApi* | [**updateOrganisation**](docs/GenericDataApi.md#updateOrganisation) | **PUT** /data/organisations/{organisationUuid} | Update an organisation
 *CervinodataApiClient.ProductDataApi* | [**getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth**](docs/ProductDataApi.md#getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth) | **GET** /data/ga4-report-per-channel-group-per-product-name-per-organisation-per-property-per-month/{organisationUuids} | Return GA4 report per channel group per product name per organisation per property per month
 
 
 ## Documentation for Models
 
+ - [CervinodataApiClient.CreateOrganisationRequest](docs/CreateOrganisationRequest.md)
 
 
 ## Documentation for Authorization

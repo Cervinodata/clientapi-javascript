@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import CreateOrganisationRequest from '../model/CreateOrganisationRequest';
 
 /**
 * GenericData service.
@@ -32,6 +33,90 @@ export default class GenericDataApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+    /**
+     * Callback function to receive the result of the createOrganisation operation.
+     * @callback module:api/GenericDataApi~createOrganisationCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create an organisation
+     * Create a new organisation
+     * @param {module:model/CreateOrganisationRequest} createOrganisationRequest 
+     * @param {module:api/GenericDataApi~createOrganisationCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
+     */
+    createOrganisation(createOrganisationRequest, callback) {
+      let postBody = createOrganisationRequest;
+      // verify the required parameter 'createOrganisationRequest' is set
+      if (createOrganisationRequest === undefined || createOrganisationRequest === null) {
+        throw new Error("Missing the required parameter 'createOrganisationRequest' when calling createOrganisation");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = Object;
+      return this.apiClient.callApi(
+        '/data/organisations', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteOrganisation operation.
+     * @callback module:api/GenericDataApi~deleteOrganisationCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete an organisation
+     * Delete an organisation. Accounts belonging to the organisation are reassigned to the default organisation. The default organisation itself cannot be deleted.
+     * @param {String} organisationUuid Organisation uuid
+     * @param {module:api/GenericDataApi~deleteOrganisationCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    deleteOrganisation(organisationUuid, callback) {
+      let postBody = null;
+      // verify the required parameter 'organisationUuid' is set
+      if (organisationUuid === undefined || organisationUuid === null) {
+        throw new Error("Missing the required parameter 'organisationUuid' when calling deleteOrganisation");
+      }
+
+      let pathParams = {
+        'organisationUuid': organisationUuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/data/organisations/{organisationUuid}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the getCampaignGroups operation.
@@ -106,6 +191,54 @@ export default class GenericDataApi {
       let returnType = 'String';
       return this.apiClient.callApi(
         '/data/organisations', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateOrganisation operation.
+     * @callback module:api/GenericDataApi~updateOrganisationCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update an organisation
+     * Update an existing organisation
+     * @param {String} organisationUuid Organisation uuid
+     * @param {module:model/CreateOrganisationRequest} createOrganisationRequest 
+     * @param {module:api/GenericDataApi~updateOrganisationCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
+     */
+    updateOrganisation(organisationUuid, createOrganisationRequest, callback) {
+      let postBody = createOrganisationRequest;
+      // verify the required parameter 'organisationUuid' is set
+      if (organisationUuid === undefined || organisationUuid === null) {
+        throw new Error("Missing the required parameter 'organisationUuid' when calling updateOrganisation");
+      }
+      // verify the required parameter 'createOrganisationRequest' is set
+      if (createOrganisationRequest === undefined || createOrganisationRequest === null) {
+        throw new Error("Missing the required parameter 'createOrganisationRequest' when calling updateOrganisation");
+      }
+
+      let pathParams = {
+        'organisationUuid': organisationUuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = Object;
+      return this.apiClient.callApi(
+        '/data/organisations/{organisationUuid}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
