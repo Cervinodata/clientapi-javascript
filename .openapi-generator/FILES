@@ -27,4 +27,3 @@ src/api/GenericDataApi.js
 src/api/ProductDataApi.js
 src/index.js
 src/model/CreateOrganisationRequest.js
-test/model/CreateOrganisationRequest.spec.js
